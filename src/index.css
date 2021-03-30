@@ -1,3 +1,39 @@
-@import 'tailwindcss/dist/base.css';
-@import 'tailwindcss/dist/components.css';
-@import 'tailwindcss/dist/utilities.css';
+/* Define global values, good to set the app look and feel */
+:root{
+    --primary-bg: teal;
+    --primary-col: white;
+    --mobile-gap: 16px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 20px;
+}
+
+body{    
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #070c24;
+    color: white;
+}
+
+/* Access to shadow-dom component and modify the internal css variables */
+product-card{ /*custom element tag */
+    /* --primary-background: var(--primary-bg); */
+    --layout-col-gap: var(--mobile-gap);
+}
+
+
+/* Create an component instace trough class names and acces to internal css variables*/
+.product-salmon { /*class asigned to component to generate a new instace*/
+    --primary-background: var(--primary-bg);
+}
+
+h1{
+    text-align: center;
+    padding: 24px;
+}
+
